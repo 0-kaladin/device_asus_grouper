@@ -38,11 +38,11 @@ TARGET_CPU_ABI2 := armeabi
 TARGET_CPU_SMP := true
 TARGET_ARCH := arm
 TARGET_ARCH_VARIANT := armv7-a-neon
-TARGET_CPU_VARIANT := cortex-a9
 ARCH_ARM_HAVE_VFP := true
 ARCH_ARM_HAVE_NEON := true
 ARCH_ARM_HAVE_TLS_REGISTER := true
 ARCH_ARMV7A_NON_QCOM := true
+TARGET_CPU_VARIANT := cortex-a9
 
 TARGET_KERNEL_SOURCE = kernel/asus/grouper
 TARGET_KERNEL_CONFIG = tegra3_android_defconfig
