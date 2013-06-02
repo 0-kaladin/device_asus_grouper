@@ -46,6 +46,7 @@ TARGET_CPU_VARIANT := cortex-a9
 
 TARGET_KERNEL_SOURCE = kernel/asus/grouper
 TARGET_KERNEL_CONFIG = tegra3_android_defconfig
+TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-eabi-4.7
 
 TARGET_USERIMAGES_USE_EXT4 := true
 
