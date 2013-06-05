@@ -37,6 +37,11 @@ TARGET_ARCH_VARIANT := armv7-a-neon
 TARGET_CPU_VARIANT := cortex-a9
 ARCH_ARM_HAVE_TLS_REGISTER := true
 
+# Set to true for platforms with 32 byte L2 cache line.
+ARCH_ARM_HAVE_32_BYTE_CACHE_LINES := true
+# Allowing unaligned access for NEON memory instructions.
+ARCH_ARM_NEON_SUPPORTS_UNALIGNED_ACCESS := true
+
 TARGET_KERNEL_SOURCE = kernel/asus/grouper
 TARGET_KERNEL_CONFIG = tegra3_android_defconfig
 TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-eabi-4.7
