@@ -29,6 +29,10 @@ BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR ?= device/asus/grouper/bluetooth
 TARGET_BOARD_PLATFORM := tegra3
 TARGET_TEGRA_VERSION := t30
 
+TARGET_EXTRA_CFLAGS += $(call cc-option,-march=armv7-a -mtune=cortex-a9)
+TARGET_GLOBAL_CFLAGS += -mfpu=neon -mcpu=cortex-a9 -mtune=cortex-a9 -mfloat-abi=softfp
+TARGET_GLOBAL_CPPFLAGS += -mfpu=neon -mcpu=cortex-a9 -mtune=cortex-a9 -mfloat-abi=softfp
+
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
 TARGET_CPU_SMP := true
@@ -36,9 +40,6 @@ TARGET_ARCH := arm
 TARGET_ARCH_VARIANT := armv7-a-neon
 ARCH_ARM_HAVE_TLS_REGISTER := true
 TARGET_CPU_VARIANT := cortex-a9
-
-TARGET_KERNEL_SOURCE = kernel/asus/grouper
-TARGET_KERNEL_CONFIG = tegra3_android_defconfig
 
 TARGET_USERIMAGES_USE_EXT4 := true
 
